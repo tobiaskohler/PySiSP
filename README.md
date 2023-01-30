@@ -2,6 +2,9 @@
 
 This script generates a graph of the specified stock symbol using data from the [Yahoo Finance API](https://finance.yahoo.com/). The graph includes a line plot of the `price_type` and a bar plot of the volume of the stock over the specified `start` and `end` dates.
 
+## Example
+![Example output (.png and .html available)](/AAPL_Close_2022-01-01-2022-12-31.png)
+
 ## Requirements
 
 - yfinance
