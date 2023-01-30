@@ -12,16 +12,19 @@ def create_graph(symbol, start, end, price_type):
 
     fig = make_subplots(rows=2, cols=1, subplot_titles=(f'{price_type}', "Volume"))
 
-    fig.append_trace(go.Scatter(
+    fig.add_trace(go.Scatter(
         x=df.index,
         y=df[price_type],
-        name=price_type
+        name=price_type,
+        line_color='#1e38af', 
+        line_width=1
     ), row=1, col=1)
 
     fig.append_trace(go.Bar(
         x=df.index,
         y=df['Volume'],
-        name="Volume"
+        name="Volume",
+        marker=dict(color='black')
     ), row=2, col=1)
 
 
@@ -53,8 +56,8 @@ if __name__ == '__main__':
     
     ##############################################
     # Input
-    symbol = 'DAX.DE'
-    start = '2018-01-01'
+    symbol = 'AAPL'
+    start = '2022-01-01'
     end = '2022-12-31'
     price_type = 'Close' #Open, High, Low, Close
     ##############################################
